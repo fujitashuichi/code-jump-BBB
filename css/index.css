@@ -1,3 +1,53 @@
 body {
     font-family: "游ゴシック体", "Yu Gothic", "游ゴシック Medium", "You Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
+
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+#toggle-btn {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #ff0000;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+}
+
+#toggle-btn > span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 0;
+    border: 1px solid #fff;
+}
+
+#toggle-btn > span:first-of-type {
+    top: 36px;
+}
+#toggle-btn > span:nth-of-type(2) {
+    top: 50px;
+}
+#toggle-btn > span:last-of-type {
+    bottom: 36px;
+}
+
+#toggle-btn.open > span:first-of-type {
+    top: 50%;
+    transform: rotateZ(45deg);
+}
+
+
+#main-visual {
+    height: calc(100vh - 100px);
+    width: 100%;
+    background-image: url("/img/mainvisual1.jpg");
+    background-size: contain;
+    background-position: right;
+}
