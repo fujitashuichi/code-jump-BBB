@@ -7,6 +7,15 @@ img {
     object-fit: cover;
 }
 
+a {
+    text-decoration: none;
+}
+
+.content {
+    width: 860px;
+    margin: 0 auto;
+}
+
 
 #header {
     position: relative;
@@ -101,4 +110,37 @@ img {
     background-image: url("/img/mainvisual1.jpg");
     background-size: contain;
     background-position: right;
+}
+
+
+#header > .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#goto-free-trial-btn {
+    position: relative;
+    padding: 18px 135px;
+    background: #ff0000;
+    border-radius: 18px;
+    border-right: 3px solid #aa0000;
+    border-bottom: 5px solid #770000;
+}
+#goto-free-trial-btn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%) rotateZ(45deg);
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+#goto-free-trial-btn a {
+    color: #fff;
 }
