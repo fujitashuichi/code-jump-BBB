@@ -1,7 +1,8 @@
+const logo = document.getElementById("site-logo");
+const menu = document.getElementById("menu");
 const toggleBtn = document.getElementById("toggle-btn");
-const spanList = document.querySelectorAll("span");
 
-if (!toggleBtn || !spanList) {
+if (!menu || !toggleBtn) {
     console.error("Some Element was not defined");
 } else {
     console.info("All Elements were defined");
@@ -10,4 +11,6 @@ if (!toggleBtn || !spanList) {
 
 toggleBtn.addEventListener("click", () => {
     toggleBtn.classList.toggle("open");
+    menu.classList.toggle("open");
+    logo.classList.toggle("white");
 });
