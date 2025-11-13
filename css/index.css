@@ -1,9 +1,11 @@
 body {
     font-family: "游ゴシック体", "Yu Gothic", "游ゴシック Medium", "You Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    overflow-x: hidden;
 }
 
 img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -88,7 +90,7 @@ a {
 
 
 #menu {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -116,8 +118,7 @@ a {
 #header > .content {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 5%;
 }
 
 #goto-free-trial-btn {
@@ -143,4 +144,82 @@ a {
 
 #goto-free-trial-btn a {
     color: #fff;
+}
+
+
+section .sec-header {
+    background: #fff;
+    padding-bottom: 80px;
+}
+section .sec-header .sec-title {
+    position: relative;
+    padding: 120px 0 0 0;
+    text-align: center;
+}
+section .sec-header .sec-title::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 0;
+    border: 1px solid #000;
+}
+
+
+#sec-1 {
+    background: #ff0000;
+}
+
+#sec-1 ul {
+    padding: 60px 0;
+}
+
+#sec-1 ul li {
+    position: relative;
+    height: 240px;
+    padding: 20px 0;
+}
+
+#sec-1 .slide-tag {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 200px;
+    background: #fff;
+}
+
+#sec-1 .slide-tag-inner {
+    display: flex;
+    width: fit-content;
+    height: 60px;
+    margin: auto;
+}
+
+#sec-1 .slide-tag-icon {
+    margin-right: 30px;
+    height: 100%;
+}
+
+#sec-1 ul li:nth-of-type(2n + 1) .slide-tag {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    top: 0;
+    left: -100%;
+    transition: all 0.5s;
+}
+#sec-1 ul li:nth-of-type(2n + 1) .slide-tag.active {
+    left: 0;
+}
+
+#sec-1 ul li:nth-of-type(2n) .slide-tag {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    top: 0;
+    right: -100%;
+    transition: all 0.5s;
+}
+#sec-1 ul li:nth-of-type(2n) .slide-tag.active {
+    right: 0;
 }
